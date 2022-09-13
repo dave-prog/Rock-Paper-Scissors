@@ -16,6 +16,7 @@ for (let i = 0; i < 5; i++) {
         let playerSelection = playerInput.toLowerCase();
 
         function play(computerSelection, playerSelection) {
+            console.log(computerSelection, playerSelection);
             if (computerSelection === playerSelection) {
                 result = console.log("It's a Tie!");
             } else if (computerSelection === "rock" && playerSelection === "paper") {
