@@ -2,7 +2,7 @@ let arr = ["rock", "paper", "scissors"];
 
 //selects computer optio from arr randomly
 function getComputerChoice() {
-	let computerChoice = arr[Math.floor(Math.random() * arr.length-1)];
+	let computerChoice = arr[Math.floor(Math.random() * arr.length)];
 	//Math.random gets a random number from 0-1 but in this 0-array's length
 	//Math.floor gets an absolute value of the index ranging from 0-arr.length-1
 	return computerChoice;
