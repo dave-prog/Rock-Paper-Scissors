@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;900&display=swap');
 
 :root{
     --barlow: 'Barlow Semi Condensed', sans-serif;
@@ -22,7 +22,101 @@ body{
     box-sizing: border-box;
 }
 
-#rules{
+#scores{
+    margin: 5rem auto;
+    width: 50%;
+}
+.main-header{
+    border: 3px solid grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+}
+.score-card{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    box-shadow: 3px 4px 5px 0px rgba(48,40,40,0.67);
+}
+.score-card p{
+    color: hsl(230, 57%, 58%);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: -0.5rem;
+}
+.figure{
+    color: var(--header-outline);
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.options{
+    width: 100%;
+    margin: 10rem auto;
+    background-image: url("./images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.paper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 20px solid hsl(230, 89%, 62%);
+    background-color: whitesmoke;
+    box-shadow: 0px 6px 1px 1px hsl(230, 67%, 48%), inset 0px 5px 1px 1px rgba(177, 177, 177, 0.75);
+    border-radius: 50%;
+}
+.paper img{
+    width: 35%;
+}
+.scissors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 20px solid hsl(39, 89%, 49%);
+    background-color: whitesmoke;
+    box-shadow: 0px 6px 1px 1px hsl(39, 88%, 38%) , inset 0px 5px 1px 1px rgba(177, 177, 177, 0.75);
+    border-radius: 50%;
+    margin-top: -10rem;
+}
+.scissors img{
+    width: 35%;
+}
+.layer1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.layer2{
+    text-align: center;
+}
+.rock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 20px solid hsl(349, 71%, 52%);
+    background-color: whitesmoke;
+    box-shadow: 0px 6px 1px 1px hsl(349, 66%, 35%) , inset 0px 5px 1px 1px rgba(177, 177, 177, 0.75);
+    border-radius: 50%;
+    margin-left: 19rem;
+}
+.rock img{
+    width: 35%;
+}
+
+#rules{ 
     background-color: white;
     width: 20vw;
     height: 43vh;
