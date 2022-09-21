@@ -2,11 +2,53 @@
 
 :root{
     --barlow: 'Barlow Semi Condensed', sans-serif;
-    --scissors-gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
-    --paper-gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
-    --rock-gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+    --scissors-gradient: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    --paper-gradient: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    --rock-gradient: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
     --dark-text: hsl(229, 25%, 31%);
     --score-text: hsl(229, 64%, 46%);
-    --heaer-outline: hsl(217, 16%, 45%);
-    --bg: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+    --header-outline: hsl(217, 16%, 45%);
+    --bg-gradient: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--barlow);
+    background: var(--bg-gradient);
+    box-sizing: border-box;
+}
+
+#rules{
+    background-color: white;
+    width: 20vw;
+    height: 43vh;
+    margin: 14% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    visibility: hidden;
+}
+.rules-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+.rules-head h2{
+    color: var(--dark-text);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 30px;
+}
+.rules-head img{
+    width: 5.5%;
+}
+.rules-img{
+    display: block;
+    margin: auto;
+    width: 85%;
 }
