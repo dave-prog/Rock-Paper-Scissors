@@ -10,22 +10,34 @@
   </head>
 
   <body>
-    <header>
-      <img src="./css/images/logo.svg" alt="logo" class="logo">
-      <div class="score-container">
-        <h4>Score</h4>
-        <h1 class="figure">13</>
-      </div>
-    </header>
+    <div class="container">
+      <header>
+        <img src="./css/images/logo.svg" alt="logo" class="logo">
+        <div class="score-container">
+          <h4>Score</h4>
+          <h1 class="figure">13</h1>
+        </div>
+      </header>
 
-    <main>
-      <button class="paper-btn"><img src="./css/images/icon-paper.svg" alt="paper"></button>
-      <button class="scissors-btn"><img src="./css/images/icon-scissors.svg" alt="scissors"></button>
-      <button class="rock-btn"><img src="./css/images/icon-rock.svg" alt="rock"></button>
-    </main>
+      <main>
+        <button class="outer-circle paper-btn">
+          <span class="wrapper">
+            <img src="./css/images/icon-paper.svg" alt="paper">
+          </span>
+        </button>
+        <button class="outer-circle scissors-btn">
+          <span class="wrapper">
+            <img src="./css/images/icon-scissors.svg" alt="scissors">
+          </span>
+        </button>
+        <button class="outer-circle rock-btn">
+          <span class="wrapper"><img src="./css/images/icon-rock.svg" alt="rock">
+          </span>
+        </button>      
+      </main>
 
-    <button class="rules-btn">Rules</button>
-
+      <button class="rules-btn">Rules</button>
+    </div>
   </body>
 </html>
   <!--<script src="./app.js" defer></script>-->
