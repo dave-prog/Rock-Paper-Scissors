@@ -1,28 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
 
 :root{
     --barlow: 'Barlow Semi Condensed', sans-serif;
-    --scissors-gradient: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-    --paper-gradient: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-    --rock-gradient: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    --bg-gradient: radial-gradient(circle at 50% -30%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     --dark-text: hsl(229, 25%, 31%);
-    --score-text: hsl(229, 64%, 46%);
     --header-outline: hsl(217, 16%, 45%);
-    --bg-gradient: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    --paper-gradient: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    --rock-gradient: linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    --score-text: hsl(229, 64%, 46%);
+    --scissors-gradient: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 }
 
 *{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    font-family: var(--barlow);
-    background: var(--bg-gradient);
     box-sizing: border-box;
 }
 
-#rules{
+body{
+    background: var(--bg-gradient);
+    font-family: var(--barlow);
+    min-height: 100vh;
+}
+
+.container{
+    margin: 2rem auto 0 auto;
+    max-width: 100%;
+    width: 800px;
+}
+
+header{
+    align-items: center;
+    border: 4px solid var(--header-outline);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    padding: 20px;
+}
+
+.score-container{
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0px 2px 1px 1px var(--dark-text);
+    padding: 15px 50px;
+    text-align: center;
+}
+.score-container > h4{
+    color: var(--score-text);
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.score-container > h1{
+    color: var(--dark-text);
+    font-size: 4rem;
+    margin: -0.5rem 0;
+}
+
+
+main{
+    align-items: center;
+    background-image: url("./images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+.outer-circle{
+    border: none;
+    border-radius: 50%;
+    box-shadow: inset 0 -8px rgba(2,2,2,0.2);
+    height: 170px;
+    margin: 25px;
+    width: 170px;
+}
+.paper-btn{
+    background: var(--paper-gradient);
+    margin-right: 3rem;
+}
+.scissors-btn{
+    background: var(--scissors-gradient);
+    margin-left: 3rem;
+}
+.rock-btn{
+    background: var(--rock-gradient);
+}
+.outer-circle .wrapper{
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: inset 0 6px rgba(0,0,0,0.1);
+    display: inline-flex;
+    height: 110px;
+    justify-content: center;
+    width: 110px;
+}
+
+
+.rules-btn{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    bottom: 50px;
+    color: white;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    padding: 8px 40px;
+    position: fixed;
+    right: 40px;
+    text-transform: uppercase;
+}
+/*#rules{ 
     background-color: white;
     width: 20vw;
     height: 43vh;
@@ -51,4 +144,4 @@ body{
     display: block;
     margin: auto;
     width: 85%;
-}
+}*/
