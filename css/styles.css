@@ -22,7 +22,7 @@ body{
 }
 
 .container{
-    margin: 4rem auto;
+    margin: 2rem auto 0 auto;
     max-width: 100%;
     width: 800px;
 }
@@ -34,13 +34,14 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 2.5rem;
     padding: 20px;
 }
 
 .score-container{
     background-color: whitesmoke;
     border-radius: 8px;
-    box-shadow: 0px 5px rgba(96,110,133,1);
+    box-shadow: 0px 2px 1px 1px var(--dark-text);
     padding: 15px 50px;
     text-align: center;
 }
@@ -57,18 +58,32 @@ header{
     margin: -0.5rem 0;
 }
 
+
+main{
+    align-items: center;
+    background-image: url("./images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
 .outer-circle{
     border: none;
     border-radius: 50%;
     box-shadow: inset 0 -8px rgba(2,2,2,0.2);
-    height: 160px;
-    width: 160px;
+    height: 170px;
+    margin: 25px;
+    width: 170px;
 }
 .paper-btn{
     background: var(--paper-gradient);
+    margin-right: 3rem;
 }
 .scissors-btn{
     background: var(--scissors-gradient);
+    margin-left: 3rem;
 }
 .rock-btn{
     background: var(--rock-gradient);
