@@ -115,14 +115,17 @@ main{
     right: 40px;
     text-transform: uppercase;
 }
-/*#rules{ 
+#rules{ 
+    position: fixed;
     background-color: white;
-    width: 20vw;
-    height: 43vh;
-    margin: 14% auto;
+    width: 300px;
+    max-width: 100%;
+    min-height: 50vh;
+    top: 30%;
+    left: 40%;
+    margin: 0 auto;
     padding: 2rem;
     border-radius: 10px;
-    visibility: hidden;
 }
 .rules-head{
     display: flex;
@@ -144,4 +147,4 @@ main{
     display: block;
     margin: auto;
     width: 85%;
-}*/
+}
