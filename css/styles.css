@@ -115,17 +115,26 @@ main{
     right: 40px;
     text-transform: uppercase;
 }
-#rules{ 
+
+.popup-container{
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
     position: fixed;
+    top: 0;
+    width: 100vw;
+}
+#rules{ 
     background-color: white;
-    width: 300px;
-    max-width: 100%;
-    min-height: 50vh;
-    top: 30%;
-    left: 40%;
-    margin: 0 auto;
-    padding: 1rem 2rem;
     border-radius: 10px;
+    height: 370px;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    width: 300px;
 }
 .rules-head{
     display: flex;
@@ -144,7 +153,6 @@ main{
     width: 7%;
 }
 .rules-img{
-    display: block;
     margin: auto;
     width: 100%;
     margin-top: 1rem;
