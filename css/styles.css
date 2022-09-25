@@ -126,6 +126,7 @@ main{
     position: fixed;
     top: 0;
     width: 100vw;
+    visibility: hidden;
 }
 #rules{ 
     background-color: white;
