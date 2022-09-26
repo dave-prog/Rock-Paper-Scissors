@@ -1,47 +1,48 @@
-const popup = document.querySelector('.rules-btn')
-const close = document.querySelector('.close-icon')
+let computerChoices = ["rock", "paper", "scissors"];
+const buttons = document.querySelectorAll(".outer-circle");
+const closePopup = document.querySelector(".close-icon");
+const popup = document.querySelector(".rules-btn");
 
-close.addEventListener("click", closePopup);
+buttons.forEach(userSelection);
+
+function userSelection(selection) {
+	selection.addEventListener("click", () => {
+		selected = selection.getAttribute("data-choice");
+		console.log(selection);
+	});
+}
+
+function computerSelection() {
+  	let computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+  	//Math.random gets a random number from 0-1 but in this 0-array's length
+  	//Math.floor gets an absolute value of the index ranging from 0-arr.length-1 
+	let optionList = [];
+	for (let i = 0; i < buttons.length; i++) {
+		const element = buttons[i];
+		optionList.push(element.getAttribute("data-choice"));
+	}
+
+	let optionSelected = '';
+	for (let j = 0; j < optionList.length; j++) {
+		optionSelected = optionList[j];
+
+		if (optionSelected == computerChoice) {
+			console.log(buttons[j]);
+		}
+	}
+	return computerChoice;
+}
+console.log(computerSelection());
+ 
+closePopup.addEventListener("click", closeContainer);
 popup.addEventListener("click", popUp);
 
+function closeContainer() {
+	document.querySelector(".popup-container").style.visibility = "hidden";
+}
 function popUp() {
-    document.querySelector(".popup-container").style.visibility = "visible";
+	document.querySelector(".popup-container").style.visibility = "visible";
 }
-function closePopup() {
-    document.querySelector('.popup-container').style.visibility = "hidden";
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let arr = ["rock", "paper", "scissors"];
-
-// //This function selects computer's option from the above array randomly
-// function getComputerChoice() {
-// 	let computerChoice = arr[Math.floor(Math.random() * arr.length)];
-// 	//Math.random gets a random number from 0-1 but in this 0-array's length
-// 	//Math.floor gets an absolute value of the index ranging from 0-arr.length-1
-// 	return computerChoice;
-// }
 
 // //This for loop repeats the game 5 times
 // for (let i = 0; i < 5; i++) {
